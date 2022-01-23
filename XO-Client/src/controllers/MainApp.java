@@ -17,7 +17,7 @@ public class MainApp extends Application {
 	public void start(Stage stage) throws Exception {
 		// TODO Auto-generated method stub
 		
-	        Parent root = FXMLLoader.load(getClass().getResource("/views/ServerFXML.fxml"));
+	        Parent root = FXMLLoader.load(getClass().getResource("/views/Login.fxml"));
 	        
 	        Scene scene = new Scene(root);
 	        
