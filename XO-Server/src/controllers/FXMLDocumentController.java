@@ -4,18 +4,15 @@
  */
 package controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 /**
  *
  * @author Mahmoud kamal
  */
-public class FXMLDocumentController implements Initializable {
+public class FXMLDocumentController {
     
     @FXML
     private Label label;
@@ -26,9 +23,6 @@ public class FXMLDocumentController implements Initializable {
         label.setText("Hello World!");
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+       
     
 }
