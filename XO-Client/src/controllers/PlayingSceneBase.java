@@ -1,4 +1,4 @@
-package playigscene;
+package controllers;
 
 import javafx.scene.text.*;
 import javafx.scene.shape.*;
