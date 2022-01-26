@@ -8,7 +8,7 @@ private int winner;
 
 
 public Game(int game_id, String player1, String player2, int winner) {
-	super();
+
 	this.game_id = game_id;
 	this.player1 = player1;
 	this.player2 = player2;

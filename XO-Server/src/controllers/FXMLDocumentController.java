@@ -30,15 +30,10 @@ public class FXMLDocumentController {
 		DatbaseSt st= new DatbaseSt();
     	//int id=Integer.parseInt(tf1.getText());
     	
-    	ResultSet rt =st.listRecGames();
-    	try {
-			while (rt.next()) {
-				System.out.println(rt.getString(3));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	String st1=tf1.getText();
+    	String st2=tf1.getText();
+    	
+    	st.insertIntoPlayer(st1, st2);
 
  	
  	

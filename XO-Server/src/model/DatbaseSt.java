@@ -26,7 +26,8 @@ public class DatbaseSt{
 			System.out.println("start con failed33");		}
 	}
 	
-	public ResultSet SelectPlayer(int player_id) {
+	
+	public ResultSet SelectPlayers(int player_id) {
         try {
 
 			pst =con.prepareStatement("Select * from Player where player_id = ? ");
@@ -44,10 +45,12 @@ public class DatbaseSt{
 	
 	return null;
 					}
+	
 	public ResultSet listRecGames() {
 		try {
 			pst = con.prepareStatement("Select * from RecordedGames ");
 			ResultSet rs = pst.executeQuery();
+
 			return rs;
 		}catch(SQLException ex) {
 			System.out.println("No Games listed");
