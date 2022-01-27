@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="519.0" style="-fx-background-color: linear-gradient(#37077B, #FDB8A5);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="134.0" layoutY="371.0" text="Do not Have Account?" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="305.0" layoutX="119.0" layoutY="43.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" width="295.0" />
+      <Button layoutX="222.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #E4A593;" text="Sign In" />
+      <PasswordField layoutX="153.0" layoutY="221.0" prefHeight="25.0" prefWidth="227.0" promptText="Enter Password" />
+      <TextField layoutX="152.0" layoutY="171.0" prefHeight="25.0" prefWidth="227.0" promptText="Enter Username" />
+      <Label alignment="CENTER" layoutX="216.0" layoutY="97.0" text="Sign In" textFill="#ebbfb3">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="325.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #533178;" text="Sign Up" textFill="WHITE" />
+   </children>
+</AnchorPane>

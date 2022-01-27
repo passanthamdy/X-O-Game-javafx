@@ -18,10 +18,10 @@ public class XOServer extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/views/FXMLDocument.fxml"));
+        ServerHome root = new ServerHome();
         
         Scene scene = new Scene(root);
-        
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
