@@ -1,0 +1,13 @@
+.table-row-cell {
+-fx-base: transparent;
+    -fx-background-color: transparent;
+    -fx-cell-size: 50px;
+}
+.list-cell {
+    -fx-cell-size: 250px;
+}
+#background{
+-fx-background-color:  linear-gradient(#37077B, #FDB8A5)
+}
+#tablecols{
+
