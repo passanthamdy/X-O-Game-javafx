@@ -44,13 +44,10 @@ public class DatbaseSt{
 	
 	return null;
 					}
-	public ResultSet listRecGames() {
+	public ResultSet listRecGames(int gId) {
 		try {
-		
-			pst = con.prepareStatement("select * from Game where game_id IN (select game_id from RecordedGames where player_id =3); ");
-			//pst.setInt(1, gId);
-		
-	
+			pst = con.prepareStatement("Select * from RecordedGames where game_id = ?");
+			pst.setInt(1, gId);
 			ResultSet rs = pst.executeQuery();
 			return rs;
 		}catch(SQLException ex) {

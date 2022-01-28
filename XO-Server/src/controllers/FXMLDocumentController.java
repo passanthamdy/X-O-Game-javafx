@@ -33,16 +33,8 @@ public class FXMLDocumentController {
     	String st1=tf1.getText();
     	String st2=tf1.getText();
     	
-    	ResultSet t= st.listRecGames();
-    	
-    	try {
-			while (t.next()) {
-				System.out.println(t.getString(2)+ t.getString(3)+ t.getString(3));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	st.insertIntoPlayer(st1, st2);
+
  	
  	
 	}

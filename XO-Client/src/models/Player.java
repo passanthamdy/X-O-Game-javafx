@@ -1,5 +1,5 @@
 package models;
-
+import javafx.scene.control.Button;
 public class Player {
 	private int player_id;
 	private String username;
@@ -7,6 +7,8 @@ public class Player {
 	private int total_games;
 	private int score;
 	private String status;
+        
+        //private Button request;
 	public Player(int player_id, String username, String password, int total_games, int score, String status) {
 		super();
 		this.player_id = player_id;
@@ -16,6 +18,23 @@ public class Player {
 		this.score = score;
 		this.status = status;
 	}
+
+
+
+        /*Constructor to PlayersList*/
+    public Player(int player_id, String username, int score, String status) {
+		super();
+                this.player_id = player_id;
+		this.username = username;
+		this.score = score;
+		this.status = status;
+                //this.request = request;
+	}
+
+
+
+
+
 	public int getPlayer_id() {
 		return player_id;
 	}
