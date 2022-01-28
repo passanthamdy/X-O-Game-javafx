@@ -17,7 +17,7 @@ public class DatabaseCon {
 	        	System.out.println("no conn11");
 	        }
 		   try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/xo_game", "root","password");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/xo_game", "tictac","password");
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
