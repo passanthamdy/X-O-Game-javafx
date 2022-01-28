@@ -1,5 +1,5 @@
 package controllers;
-
+import java.sql.*;
 import javafx.geometry.*;
 import javafx.scene.image.*;
 import javafx.scene.shape.*;
@@ -11,7 +11,12 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.event.*;  
-
+import models.Player;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.collections.ObservableList;
+import javafx.collections.ListChangeListener;
+import javafx.collections.FXCollections;
+import javafx.util.Callback;
 public class PlayersList extends AnchorPane {
 
     protected final Button logOut;
@@ -20,12 +25,11 @@ public class PlayersList extends AnchorPane {
     protected final Rectangle rectangle;
     protected final Label score;
     protected final Button home;
-    protected final TableView playersList;
+    protected final TableView<Player> playersList;
     protected final TableColumn playerName;
     protected final TableColumn playerScore;
     protected final TableColumn playerStatus;
-    protected final TableColumn challenge;
-
+    protected final TableColumn<Player, Void> challenge;
     public PlayersList(Stage stage) {
 
         logOut = new Button();
@@ -34,7 +38,7 @@ public class PlayersList extends AnchorPane {
         rectangle = new Rectangle();
         score = new Label();
         home = new Button();
-        playersList = new TableView();
+        playersList = new TableView<>();
         playerName = new TableColumn();
         playerScore = new TableColumn();
         playerStatus = new TableColumn();
@@ -120,11 +124,7 @@ public class PlayersList extends AnchorPane {
         getChildren().add(rectangle);
         getChildren().add(score);
         getChildren().add(home);
-        playersList.getColumns().add(playerName);
-        playersList.getColumns().add(playerScore);
-        playersList.getColumns().add(playerStatus);
-        playersList.getColumns().add(challenge);
-        getChildren().add(playersList);
+        
         
         logOut.setOnAction(new EventHandler<ActionEvent>(){
                     @Override
@@ -144,6 +144,64 @@ public class PlayersList extends AnchorPane {
                         stage.show();
                     }
         });
+        /*
+        Table content
+        */
+        ObservableList<Player> players = FXCollections.observableArrayList();
+        
+        players.add(new Player(1,"Abdorahman", 7, "offline"));
+        players.add(new Player(2,"Fatma", 5, "online"));
+        
+        
 
+        playerName.setCellValueFactory(new PropertyValueFactory<Player, String>("username"));
+        playerScore.setCellValueFactory(new PropertyValueFactory<Player, Integer>("score"));
+        playerStatus.setCellValueFactory(new PropertyValueFactory<Player,String>("status"));
+       
+
+        playersList.setItems(players);
+        
+        playersList.getColumns().add(playerName);
+        playersList.getColumns().add(playerScore);
+        playersList.getColumns().add(playerStatus);
+        getChildren().add(playersList);
+        
+
+
+
+        
+
+        Callback<TableColumn<Player, Void>, TableCell<Player, Void>> cellFactory = new Callback<TableColumn<Player, Void>, TableCell<Player, Void>>() {
+            @Override
+            public TableCell<Player, Void> call(final TableColumn<Player, Void> param) {
+                final TableCell<Player, Void> cell = new TableCell<Player, Void>() {
+
+                    private final Button request = new Button("Challenge");
+               
+
+                    {
+                        request.setOnAction((ActionEvent event) -> {
+                            Player playerData = getTableView().getItems().get(getIndex());
+                            int user = playerData.getPlayer_id();
+                            System.out.println("username: " + user);
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(request);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+    
+    challenge.setCellFactory(cellFactory);
+    playersList.getColumns().add(challenge);
     }
 }
