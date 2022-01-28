@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="519.0" style="-fx-background-color: linear-gradient(#37077B, #FDB8A5);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="483.0" opacity="0.29" stroke="BLACK" strokeType="INSIDE" width="169.0" />
+      <TableView layoutX="173.0" layoutY="90.0" prefHeight="383.0" prefWidth="325.0" style="-fx-background-color: none;">
+        <columns>
+          <TableColumn prefWidth="179.0" text="Name" />
+          <TableColumn prefWidth="73.0" text="Score" />
+            <TableColumn prefWidth="72.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="174.0" layoutY="44.0" text="List Of Players" textFill="#e4a593">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="22.0" layoutY="218.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="125.0" style="-fx-background-color: #E4A593;" text="Stop Service" />
+      <Button layoutX="22.0" layoutY="136.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="125.0" style="-fx-background-color: #E4A593;" text="Open Service" />
+      <Label layoutX="22.0" layoutY="98.0" text="Server Control" textFill="#e4a593">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

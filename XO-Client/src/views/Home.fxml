@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="519.0" style="-fx-background-color: linear-gradient(#37077B, #FDB8A5);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button alignment="TOP_RIGHT" layoutX="437.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #E4A593; -fx-text-fill: #ffffff; -fx-background-radius: 20px; -fx-font-weight: bold;" text="Log Out">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="29.0" layoutY="13.0">
+         <image>
+            <Image url="@../../../profile.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="69.0" style="-fx-font-weight: bold;" text="User_Name" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="25.0" layoutX="14.0" layoutY="94.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="83.0" />
+      <Label alignment="CENTER" layoutX="31.0" layoutY="99.0" text="10 Points" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <Label alignment="CENTER" layoutX="232.0" layoutY="76.0" text="X" textFill="#e4a593">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="79.0" text="O" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="127.0" text="T" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="127.0" text="O" textFill="#e4a593">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="172.0" layoutY="195.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="194.0" style="-fx-background-color: #E4A593;" text="Play vs PC" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="172.0" layoutY="255.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="194.0" style="-fx-background-color: #533178;" text="Play Online" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="172.0" layoutY="315.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="194.0" style="-fx-background-color: #3D0D7C;" text="Recorded Games" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="173.0" layoutY="377.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="194.0" style="-fx-background-color: #533178;" text="List of Players" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
