@@ -2,15 +2,18 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ServerFXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ButtonBar layoutX="117.0" layoutY="224.0" prefHeight="59.0" prefWidth="234.0">
-        <buttons>
-          <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="56.0" prefWidth="178.0" text="Click" />
-        </buttons>
-      </ButtonBar>
+      <ButtonBar layoutX="117.0" layoutY="224.0" prefHeight="59.0" prefWidth="234.0" />
+      <Label fx:id="label2" layoutX="128.0" layoutY="55.0" prefHeight="82.0" prefWidth="287.0" text="Click on label to fire " textFill="#bf3c3c">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    <Button fx:id="btn1" layoutX="145.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonAction" opacity="0.0" prefHeight="56.0" prefWidth="178.0" text="Click" />
    </children>
 </AnchorPane>
